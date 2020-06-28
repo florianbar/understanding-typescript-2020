@@ -1,10 +1,7 @@
-var Person = /** @class */ (function () {
-    function Person() {
-    }
-    return Person;
-}());
 var person = {
     name: "Florian",
-    age: 34
+    age: 34,
+    hobbies: ["Climbing", "Cooking"],
+    role: [2, "author", false] // tuple
 };
 console.log(person.name);
