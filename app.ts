@@ -1,17 +1,18 @@
-enum Role { admin, readOnly, author };
+// union types
+function combine(input1: number | string, input2: number | string) {
+    let result;
 
-const person: {
-    name: string;
-    age: number;
-    hobbies: string[];
-    random: [number, string, boolean]; // tuple
-    role: Role
-} = {
-    name: "Florian",
-    age: 34,
-    hobbies: ["Climbing", "Cooking"],
-    random: [2, "author", false], // tuple
-    role: Role.admin
-};
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2;
+    } else {
+        result = input1.toString() + input2.toString();
+    }
+    
+    return result;
+}
 
-console.log(person.name);
+const combineAges = combine(34, 33);
+console.log(combineAges);
+
+const combineNames = combine("Florian", "Bar");
+console.log(combineNames);
