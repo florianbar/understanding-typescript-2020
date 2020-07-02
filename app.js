@@ -1,21 +1,3 @@
-var person1 = /** @class */ (function () {
-    function person1() {
-    }
-    return person1;
-}());
-;
-// union types
-function combine(input1, input2) {
-    var result;
-    if (typeof input1 === "number" && typeof input2 === "number") {
-        result = input1 + input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
-}
-var combineAges = combine(34, 33);
-console.log(combineAges);
-var combineNames = combine("Florian", "Bar");
-console.log(combineNames);
+"use strict";
+var userInput;
+alert("testssss");
